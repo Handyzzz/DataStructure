@@ -10,8 +10,9 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+
 typedef int ListItem;
-typedef struct node *Link;
+typedef struct node* Link;
 typedef struct node
 {
     //存放的数据
@@ -36,6 +37,7 @@ ListItem ListRetrieve(int,List);
 int ListLocate(ListItem,List);
 void ListInsert(int,ListItem,List);
 ListItem ListDelegate(int,List);
+void PrintList(List);
 void ItemShow(int);
 
 int main(){
@@ -46,6 +48,12 @@ int main(){
     //计算表的长度
     ListLength(list);
     //表中插入元素
+    ListInsert(0, 200, list);
+     PrintList(list);
+    //表中删除数据
+    ListDelegate(1, list);
+    PrintList(list);
+    
     
     return 0;
 }
@@ -114,6 +122,7 @@ void ListInsert(int k,ListItem x,List L){
     if (k < 0) {
         Error("out of bounds");
     }
+
     p = L->first;
     for (i = 1; i < k && p; i++) {
         p = p->next;
@@ -122,7 +131,7 @@ void ListInsert(int k,ListItem x,List L){
     y->element = x;
     if (k) {
         y->next = p->next;
-        p->next = y;
+        p->next = y;//y表示当前的地址
     }else{
         y->next = L->first;//在位置p处插入
         L->first = y;//在表首处插入
@@ -156,6 +165,9 @@ ListItem ListDelegate(int k ,List L){
 //输出表
 void PrintList(List L){
     Link p;
+    if (ListLength(L)==0) {
+        printf("表是空的\n");
+    }
     for (p = L->first; p; p = p->next) {
         ItemShow(p->element);
     }

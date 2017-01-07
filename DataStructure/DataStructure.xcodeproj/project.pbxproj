@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		825A3D9A1E1CF09E00109826 /* List_Pointer.m in Sources */ = {isa = PBXBuildFile; fileRef = 825A3D991E1CF09E00109826 /* List_Pointer.m */; };
+		822372E71E1FA52800FED265 /* List_index.m in Sources */ = {isa = PBXBuildFile; fileRef = 822372E61E1FA52800FED265 /* List_index.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,9 +23,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		822372DD1E1F387300FED265 /* List_Array.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = List_Array.m; path = DataStructure/List_Array.m; sourceTree = "<group>"; };
+		822372DE1E1F387300FED265 /* List_indirectAddressing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = List_indirectAddressing.m; path = DataStructure/List_indirectAddressing.m; sourceTree = "<group>"; };
+		822372DF1E1F387300FED265 /* List_Pointer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = List_Pointer.m; path = DataStructure/List_Pointer.m; sourceTree = "<group>"; };
+		822372E61E1FA52800FED265 /* List_index.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = List_index.m; sourceTree = "<group>"; };
 		825A3D861E1CE42100109826 /* DataStructure */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataStructure; sourceTree = BUILT_PRODUCTS_DIR; };
-		825A3D901E1CE43A00109826 /* List_Array.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = List_Array.m; sourceTree = "<group>"; };
-		825A3D991E1CF09E00109826 /* List_Pointer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = List_Pointer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +41,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		822372DC1E1F383000FED265 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				822372DD1E1F387300FED265 /* List_Array.m */,
+				822372DF1E1F387300FED265 /* List_Pointer.m */,
+				822372DE1E1F387300FED265 /* List_indirectAddressing.m */,
+				822372E61E1FA52800FED265 /* List_index.m */,
+			);
+			name = List;
+			sourceTree = "<group>";
+		};
 		825A3D7D1E1CE42100109826 = {
 			isa = PBXGroup;
 			children = (
@@ -58,8 +71,7 @@
 		825A3D881E1CE42100109826 /* DataStructure */ = {
 			isa = PBXGroup;
 			children = (
-				825A3D901E1CE43A00109826 /* List_Array.m */,
-				825A3D991E1CF09E00109826 /* List_Pointer.m */,
+				822372DC1E1F383000FED265 /* List */,
 			);
 			path = DataStructure;
 			sourceTree = "<group>";
@@ -120,7 +132,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				825A3D9A1E1CF09E00109826 /* List_Pointer.m in Sources */,
+				822372E71E1FA52800FED265 /* List_index.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +253,7 @@
 				825A3D8F1E1CE42100109826 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
